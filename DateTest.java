@@ -46,7 +46,7 @@ public class DateTest
             {   // START OF if
                 while(day < 1 || day > 31)
                 {   // START OF while
-                    System.out.print("Invalid input. Enter day: ");
+                    System.out.print("Invalid input for " + date1.getMonthName() +  ". Enter day: ");
                     day = keyboard.nextInt();
                 }   // END OF while
             }   // END OF if
@@ -58,7 +58,7 @@ public class DateTest
             {   // START OF if
                 while(day <1 || day > 30)
                 {   // START OF while
-                    System.out.print("Invalid input. Enter day: ");
+                    System.out.print("Invalid input for " + date1.getMonthName() + ". Enter day: ");
                     day = keyboard.nextInt();
                 }   // END OF while
             }   // END OF if
@@ -66,9 +66,9 @@ public class DateTest
         // February
         if(month == 2)
         {   // START OF if
-            while(day <1 || day > 28)
+            while(day <1 || day > 29)
             {
-                System.out.print("Invalid input. Enter day: ");
+                System.out.print("Invalid input for February. Enter day: ");
                 day = keyboard.nextInt();
             }
         }   // END OF if
@@ -77,7 +77,14 @@ public class DateTest
         // Get user input for year
         System.out.print("Enter year: ");
         year = keyboard.nextInt();
+        // Input validation for February leap year
+        while(year % 4 != 0 && day > 28)
+        {
+            System.out.print("Invalid input for February 29th. Enter a leap year: ");
+            year = keyboard.nextInt();
+        }
         date1.setYear(year);
+
 
 
         // Display date
