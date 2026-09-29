@@ -39,7 +39,7 @@ public class Employee
         name = n;
     }   // END OF setName method
 
-    public void setID(int id)
+    public void setidNum(int id)
     {   // START OF setID method
         idNumber = id;
     }   // END OF setID method
@@ -56,5 +56,21 @@ public class Employee
 
 
     // Accessor functions for Employee class
+    public String getName()
+    {
+        return name;
+    }
+    public int getidNum()
+    {
+        return idNumber;
+    }
+    public String getDepartment()
+    {
+        return department;
+    }
+    public String getPosition()
+    {
+        return position;
+    }
 
 }   // END OF Employee class
